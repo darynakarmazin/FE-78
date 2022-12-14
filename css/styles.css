@@ -1,9 +1,9 @@
 :root {
   --primary-font: 'Open Sans', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
-  --primary-text-color-theme-dark: #9da4bd;
+  --primary-text-color-theme-dark: #ffffff;
   --primary-text-color-theme-light: #303030;
-  --secondary-text-color-theme-dark: #ffffff;
+  --secondary-text-color-theme-dark: #9da4bd;
   --secondary-text-color-theme-light: #555555;
   --accent-color: #ff6c00;
 }
@@ -27,13 +27,17 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
-
-  /* color: #FFFFFF; */
+}
+.modal-btn-theme-dark {
+  color: var(--primary-text-color-theme-dark);
+}
+.modal-btn-theme-light {
+  color: var(--primary-text-color-theme-light);
 }
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--primary-text-color-theme-dark);
 }
 .media-list-link {
   font-weight: 600;
@@ -41,7 +45,7 @@ body {
   line-height: 1.36;
   letter-spacing: 0.2em;
 
-  color: #303030;
+  color: var(--primary-text-color-theme-light);
 }
 .media-list-link:hover,
 .media-list-link:focus {
@@ -66,17 +70,17 @@ body {
   line-height: 1.67;
   letter-spacing: 0.02em;
 
-  color: var(--secondary-text-color-theme-light)
+  color: var(--secondary-text-color-theme-light);
 }
 .section-title {
-font-family: var(--secondary-font);
-font-weight: 700;
-font-size: 42px;
-line-height: 1.67;
-letter-spacing: 0.05em;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.67;
+  letter-spacing: 0.05em;
 }
 .section-title-theme-dark {
-  color: var(--secondary-text-color-theme-dark);
+  color: var(--primary-text-color-theme-dark);
 }
 .section-title-theme-light {
   color: var(--primary-text-color-theme-light);
@@ -90,7 +94,7 @@ letter-spacing: 0.05em;
   line-height: 1.33;
   letter-spacing: 0.1em;
 
-  color: var(--secondary-text-color-theme-dark);
+  color: var(--primary-text-color-theme-dark);
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -102,7 +106,7 @@ letter-spacing: 0.05em;
   line-height: 1.33;
   letter-spacing: 0.1em;
 
-  color: var(--secondary-text-color-theme-dark);
+  color: var(--primary-text-color-theme-dark);
 }
 .phone-number:hover,
 .phone-number:focus {
@@ -117,117 +121,111 @@ letter-spacing: 0.05em;
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
+
+  color: var(--primary-text-color-theme-dark);
 }
-
-/* color: #FFFFFF; */
-
 /* ========== /HERO ========== */
 
 /* ========== ABOUT ==========*/
 .about-text {
-font-weight: 400;
-font-size: 14px;
-line-height: 1.86;
-letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
 
-color: var(--secondary-text-color-theme-light);
+  color: var(--secondary-text-color-theme-light);
 }
 /* ========== /ABOUT ==========*/
 
 /* ========== SERVICES AND PRICES ==========*/
 .prices-table {
-font-weight: 400;
-font-size: 18px;
-line-height: 1.67;
-letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
 
-color: var(--primary-text-color-theme-dark);
+  color: var(--secondary-text-color-theme-dark);
 }
 /* ========== /SERVICES AND PRICES ==========*/
 
 /* ========== ¿Why people come to us? =========*/
 .number-benefits {
-font-weight: 700;
-font-size: 42px;
-line-height: 1.35;
-text-align: center;
-letter-spacing: 0.05em;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.35;
+  text-align: center;
+  letter-spacing: 0.05em;
 
-color: var(--primary-text-color-theme-light)
-}
-.plus-benefits {
-font-weight: 600;
-font-size: 16px;
-line-height: 1.38;
-text-align: center;
-
-color: var(--accent-color)
+  color: var(--primary-text-color-theme-light);
 }
 .discription-benefits {
-font-weight: 600;
-font-size: 11px;
-line-height: 1,36;
-text-align: center;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1, 36;
+  text-align: center;
 
-color: var(--primary-text-color-theme-light);
+  color: var(--primary-text-color-theme-light);
 }
 /* ========== /¿Why people come to us? =========*/
 
 /* ========== Our barbers (Barbers) ===========*/
 .barber-name-title {
-font-weight: 400;
-font-size: 18px;
-line-height: 1.38;
-text-align: center;
-letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.38;
+  text-align: center;
+  letter-spacing: 0.02em;
 
-color: var(--primary-text-color-theme-light);
+  color: var(--primary-text-color-theme-light);
 }
 .barber-position {
-font-weight: 400;
-font-size: 14px;
-line-height: 1.36;
-text-align: center;
-letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
 
-color:var(--accent-color);
+  color: var(--accent-color);
 }
 /* ========== /Our barbers (Barbers) ===========*/
 
 /* ========= Contacts ==========*/
 .contacts-link {
-font-weight: 700;
-font-size: 18px;
-line-height: 1.67;
-letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
 
-color: var(--primary-text-color-theme-dark);
+  color: var(--secondary-text-color-theme-dark);
 }
 .contacts-text {
-font-weight: 600;
-font-size: 11px;
-line-height: 1.36;
-text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
 
-color: var(--secondary-text-color-theme-dark);
+  color: var(--primary-text-color-theme-dark);
 }
 .contacts-time {
-font-weight: 400;
-font-size: 18px;
-line-height: 1.67;
-letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
 
-color: var(--primary-text-color-theme-dark);
+  color: var(--secondary-text-color-theme-dark);
+}
+.adress {
+  font-weight: 700;
 }
 /* ========= /Contacts ==========*/
 
 /* ========== Footer ========== */
 .copy {
-font-weight: 600;
-font-size: 11px;
-line-height: 1.36;
-letter-spacing: 0.2em;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
 
-color: var(--primary-text-color-theme-dark);
+  color: var(--secondary-text-color-theme-dark);
 }
 /* ========== /Footer ========== */
