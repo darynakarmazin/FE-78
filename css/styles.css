@@ -7,7 +7,25 @@
   --secondary-text-color-theme-light: #555555;
   --accent-color: #ff6c00;
 }
-
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
+button {
+  cursor: pointer;
+}
 .list {
   list-style: none;
 }
@@ -18,8 +36,20 @@
 body {
   font-family: var(--primary-font);
 }
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 /* ========== COMPONENTS ========== */
 .modal-btn {
+  padding: 12px 20px;
   font-family: var(--primary-font);
   font-weight: 600;
   font-size: 12px;
@@ -27,6 +57,10 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
+
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  background-color: transparent;
 }
 .modal-btn-theme-dark {
   color: var(--primary-text-color-theme-dark);
@@ -52,11 +86,12 @@ body {
   color: var(--accent-color);
 }
 .suptitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
-  /* letter-spacing: ??? */
 }
 .suptitle-theme-dark {
   color: rgba(157, 164, 189, 0.6);
@@ -65,7 +100,6 @@ body {
   color: var(--primary-text-color-theme-light);
 }
 .section-description {
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
@@ -74,20 +108,46 @@ body {
 }
 .section-title {
   font-family: var(--secondary-font);
-  font-weight: 700;
   font-size: 42px;
-  line-height: 1.67;
+  line-height: 1.17;
   letter-spacing: 0.05em;
 }
 .section-title-theme-dark {
+  margin-bottom: 44px;
   color: var(--primary-text-color-theme-dark);
 }
 .section-title-theme-light {
+  margin-bottom: 20px;
   color: var(--primary-text-color-theme-light);
 }
 /* ========== /COMPONENTS ========== */
 
 /* ========== SITE HEADER ==========*/
+.page-header {
+  padding-top: 32px;
+  padding-left: 55px;
+  padding-right: 17px;
+  /* тимчасово */
+  background-color: rgba(25, 28, 38, 0.2);
+}
+.logo {
+  margin-right: 131px;
+}
+.page-header-container {
+  display: flex;
+  align-items: center;
+}
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu-item:not(:last-child) {
+  margin-right: 30px;
+}
 .menu-link {
   font-weight: 600;
   font-size: 12px;
@@ -101,6 +161,9 @@ body {
   color: var(--accent-color);
 }
 .phone-number {
+  margin-left: auto;
+  margin-right: 43px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -115,31 +178,69 @@ body {
 /* ========== /SITE HEADER ==========*/
 
 /* ========== HERO ========== */
+.hero {
+  /* тимчасово */
+  background-color: rgba(25, 28, 38, 0.2);
+  padding-top: 184px;
+  padding-bottom: 208px;
+}
+.media-list {
+  display: flex;
+  align-items: center;
+}
+.media-list-item:not(:last-child) {
+  margin-right: 40px;
+}
 .main-title {
+  margin-bottom: 20px;
+
   font-family: var(--secondary-font);
-  font-weight: 700;
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
 
   color: var(--primary-text-color-theme-dark);
 }
+.hero-container {
+  padding-left: 100px;
+  padding-right: 526px;
+}
 /* ========== /HERO ========== */
 
 /* ========== ABOUT ==========*/
+.about-container {
+  display: flex;
+  align-items: center;
+  padding-right: 100px;
+}
+.about-list {
+  display: flex;
+  align-items: center;
+}
+.about-list-item {
+  margin-right: 30px;
+}
+.section-description-about {
+  margin-bottom: 20px;
+}
 .about-text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
 
   color: var(--secondary-text-color-theme-light);
 }
+.about-text-about {
+  margin-bottom: 42px;
+}
 /* ========== /ABOUT ==========*/
 
 /* ========== SERVICES AND PRICES ==========*/
+.prices {
+  /* тимчасово */
+  background-color: rgba(25, 28, 38, 0.2);
+}
 .prices-table {
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
@@ -150,6 +251,7 @@ body {
 
 /* ========== ¿Why people come to us? =========*/
 .number-benefits {
+  margin-bottom: 6px;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.35;
@@ -161,15 +263,44 @@ body {
 .discription-benefits {
   font-weight: 600;
   font-size: 11px;
-  line-height: 1, 36;
+  line-height: 1.36;
   text-align: center;
 
   color: var(--primary-text-color-theme-light);
 }
+.benefits-container {
+  display: flex;
+}
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-right: 130px;
+}
+.benefits-list-item {
+  padding: 20px 24px;
+  background-color: #f7f7f7;
+  width: 170px;
+}
 /* ========== /¿Why people come to us? =========*/
 
 /* ========== Our barbers (Barbers) ===========*/
+.barbers {
+  background-color: #f7f7f7;
+}
+.barbers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.barbers-item {
+  flex-basis: calc((100% - 2 * 30px) / 3);
+}
+.barber-title {
+  margin-bottom: 44px;
+}
 .barber-name-title {
+  margin-bottom: 8px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.38;
@@ -179,7 +310,6 @@ body {
   color: var(--primary-text-color-theme-light);
 }
 .barber-position {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.36;
   text-align: center;
@@ -187,11 +317,36 @@ body {
 
   color: var(--accent-color);
 }
+.barber-name-card {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
 /* ========== /Our barbers (Barbers) ===========*/
+
+/* ========== Photo gallery ==========*/
+.gallery-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.gallery-list-item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
+}
+.gallery-suptitle {
+  margin-bottom: 44px;
+}
+/* ========== Photo gallery ==========*/
+
+/* ========== Online-booking ========== */
+.last-sections {
+  display: flex;
+  justify-content:baseline;
+  background-color: #191c26;
+}
+/* ========== Online-booking ========== */
 
 /* ========= Contacts ==========*/
 .contacts-link {
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
@@ -207,7 +362,6 @@ body {
   color: var(--primary-text-color-theme-dark);
 }
 .contacts-time {
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
@@ -220,6 +374,13 @@ body {
 /* ========= /Contacts ==========*/
 
 /* ========== Footer ========== */
+.footer-container {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .copy {
   font-weight: 600;
   font-size: 11px;
