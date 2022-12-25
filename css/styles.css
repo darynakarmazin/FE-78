@@ -445,18 +445,31 @@ body {
 
 /* ========== Online-booking ========== */
 .last-sections {
-  padding-top: 130px;
-  padding-bottom: 120px;
+  background-color: #191c26;
+  margin-top: 130px;
+}
+.last-container {
   display: flex;
   align-items: flex-start;
-  background-color: #191c26;
 }
 .last-sections-side {
-  flex-basis: calc(100% / 2);
+  display: flex;
+  /* justify-content: center;
+align-items: center; */
+}
+.booking {
+  width: 50%;
+}
+.contacts {
+  width: 50%;
+  padding-left: 130px;
 }
 /* ========== Online-booking ========== */
 
 /* ========= Contacts ==========*/
+.contact-list {
+  margin-bottom: 70px;
+}
 .contacts-link {
   font-size: 18px;
   line-height: 1.67;
@@ -465,12 +478,23 @@ body {
   color: var(--secondary-text-color-theme-dark);
 }
 .contacts-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
 
   color: var(--primary-text-color-theme-dark);
+}
+.contacts-text::before {
+  display: block;
+  width: 60px;
+  height: 1px;
+  content: '';
+  margin-right: 20px;
+  background-color: rgba(157, 164, 189, 0.4);
 }
 .contacts-time {
   font-size: 18px;
