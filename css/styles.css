@@ -7,6 +7,11 @@
   --secondary-text-color-theme-light: #555555;
   --accent-color: #ff6c00;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 h1,
 h2,
 h3,
@@ -41,6 +46,7 @@ body {
   padding-bottom: 120px;
 }
 .container {
+  border: 1px solid #ff6c00;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -49,6 +55,8 @@ body {
 }
 /* ========== COMPONENTS ========== */
 .modal-btn {
+  min-width: 160px;
+  height: 40px;
   padding: 12px 20px;
   font-family: var(--primary-font);
   font-weight: 600;
@@ -86,12 +94,26 @@ body {
   color: var(--accent-color);
 }
 .suptitle {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
-
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
+}
+.suptitle::before {
+  display: block;
+  width: 60px;
+  height: 1px;
+  content: '';
+  margin-right: 20px;
+}
+.suptitle-theme-dark::before {
+  background-color: rgba(157, 164, 189, 0.6);
+}
+.suptitle-theme-light::before {
+  background-color: var(--primary-text-color-theme-light);
 }
 .suptitle-theme-dark {
   color: rgba(157, 164, 189, 0.6);
@@ -103,7 +125,11 @@ body {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-
+}
+.section-description-theme-dark {
+  color: var(--secondary-text-color-theme-dark);
+}
+.section-description-theme-light {
   color: var(--secondary-text-color-theme-light);
 }
 .section-title {
@@ -125,10 +151,8 @@ body {
 /* ========== SITE HEADER ==========*/
 .page-header {
   padding-top: 32px;
-  padding-left: 55px;
-  padding-right: 17px;
-  /* тимчасово */
-  background-color: rgba(25, 28, 38, 0.2);
+  padding-bottom: 32px;
+  background-color: rgba(25, 28, 38);
 }
 .logo {
   margin-right: 131px;
@@ -179,31 +203,64 @@ body {
 
 /* ========== HERO ========== */
 .hero {
-  /* тимчасово */
-  background-color: rgba(25, 28, 38, 0.2);
-  padding-top: 184px;
-  padding-bottom: 208px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-container {
+  display: flex;
+}
+.hero-right-side {
+  padding-top: 272px;
+  padding-bottom: 206px;
+  padding-left: 100px;
+  flex-grow: 1;
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+    url('../images/hero/hero-img.jpg');
+  background-size: cover;
+  background-color: rgba(25, 28, 38);
+}
+.hero .hero-left-side {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  max-width: 140px;
+}
+.hero .media-list {
+  transform: rotate(-90deg);
 }
 .media-list {
   display: flex;
   align-items: center;
+  padding-left: 400px;
+}
+.media-list::before {
+  display: block;
+  width: 60px;
+  height: 1px;
+  content: '';
+  margin-right: 40px;
+}
+.media-list::before {
+  background-color: rgba(157, 164, 189, 0.6);
+}
+.media-list::before {
+  background-color: var(--primary-text-color-theme-light);
+}
+.hero .section-description {
+  max-width: 360px;
 }
 .media-list-item:not(:last-child) {
   margin-right: 40px;
 }
 .main-title {
   margin-bottom: 20px;
-
   font-family: var(--secondary-font);
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
 
   color: var(--primary-text-color-theme-dark);
-}
-.hero-container {
-  padding-left: 100px;
-  padding-right: 526px;
 }
 /* ========== /HERO ========== */
 
@@ -237,15 +294,34 @@ body {
 
 /* ========== SERVICES AND PRICES ==========*/
 .prices {
-  /* тимчасово */
-  background-color: rgba(25, 28, 38, 0.2);
+  background-image: url(../images/services-and-prices/prices-img.png),
+    linear-gradient(#111319, #111319);
+  background-size: cover;
+  background-color: #111319;
+}
+.prices-wrap {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 44px;
 }
 .prices-table {
+  width: calc((100% - 30px) / 2);
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-
   color: var(--secondary-text-color-theme-dark);
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+.prices-item {
+  display: flex;
+  justify-content: space-between;
+}
+.prices-item + .prices-item {
+  margin-top: 20px;
+}
+.prices-btn {
+  display: block;
+  margin: 0 auto;
 }
 /* ========== /SERVICES AND PRICES ==========*/
 
@@ -268,19 +344,29 @@ body {
 
   color: var(--primary-text-color-theme-light);
 }
+.benefits .section-description {
+  max-width: 500px;
+}
 .benefits-container {
   display: flex;
 }
 .benefits-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  max-width: 370px;
   margin-right: 130px;
+  margin-left: 100px;
+}
+.benefits-list-item:nth-child(2n) {
+  margin-left: 30px;
+  margin-top: 30px;
 }
 .benefits-list-item {
+  width: 170px;
+  height: 133px;
+  text-align: center;
   padding: 20px 24px;
   background-color: #f7f7f7;
-  width: 170px;
 }
 /* ========== /¿Why people come to us? =========*/
 
@@ -290,7 +376,6 @@ body {
 }
 .barbers-list {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
 }
 .barbers-item {
@@ -310,16 +395,37 @@ body {
   color: var(--primary-text-color-theme-light);
 }
 .barber-position {
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.02em;
-
   color: var(--accent-color);
 }
 .barber-name-card {
   margin-bottom: 30px;
   margin-top: 30px;
+}
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--accent-color);
+}
+.social-list-icon {
+  fill: var(--primary-text-color-theme-light);
 }
 /* ========== /Our barbers (Barbers) ===========*/
 
@@ -339,9 +445,14 @@ body {
 
 /* ========== Online-booking ========== */
 .last-sections {
+  padding-top: 130px;
+  padding-bottom: 120px;
   display: flex;
-  justify-content:baseline;
+  align-items: flex-start;
   background-color: #191c26;
+}
+.last-sections-side {
+  flex-basis: calc(100% / 2);
 }
 /* ========== Online-booking ========== */
 
