@@ -69,6 +69,7 @@ body {
   border: 1px solid var(--accent-color);
   border-radius: 25px;
   background-color: transparent;
+  transition: color 250ms linear, background-color 250ms linear;
 }
 .modal-btn-theme-dark {
   color: var(--primary-text-color-theme-dark);
@@ -88,6 +89,7 @@ body {
   letter-spacing: 0.2em;
 
   color: var(--primary-text-color-theme-light);
+  transition: color 250ms linear;
 }
 .media-list-link:hover,
 .media-list-link:focus {
@@ -150,9 +152,13 @@ body {
 
 /* ========== SITE HEADER ==========*/
 .page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
-  background-color: rgba(25, 28, 38);
+  /* background-color: rgba(25, 28, 38); */
 }
 .logo {
   margin-right: 131px;
@@ -179,6 +185,7 @@ body {
   letter-spacing: 0.1em;
 
   color: var(--primary-text-color-theme-dark);
+  transition: color 250ms linear;
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -194,10 +201,14 @@ body {
   letter-spacing: 0.1em;
 
   color: var(--primary-text-color-theme-dark);
+  transition: color 250ms linear;
 }
 .phone-number:hover,
 .phone-number:focus {
   color: var(--accent-color);
+}
+.page-header .modal-btn {
+  margin-right: 17px;
 }
 /* ========== /SITE HEADER ==========*/
 
@@ -217,6 +228,8 @@ body {
   flex-grow: 1;
   background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
     url('../images/hero/hero-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   background-color: rgba(25, 28, 38);
 }
@@ -224,7 +237,7 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  max-width: 140px;
+  max-width: 100px;
 }
 .hero .media-list {
   transform: rotate(-90deg);
@@ -420,12 +433,13 @@ body {
   border-radius: 50%;
   background-color: #ffffff;
 }
+.social-list-icon {
+  fill: var(--primary-text-color-theme-light);
+  transition: fill 250ms linear;
+}
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
   fill: var(--accent-color);
-}
-.social-list-icon {
-  fill: var(--primary-text-color-theme-light);
 }
 /* ========== /Our barbers (Barbers) ===========*/
 
@@ -446,7 +460,6 @@ body {
 /* ========== Online-booking ========== */
 .last-sections {
   background-color: #191c26;
-  margin-top: 130px;
 }
 .last-container {
   display: flex;
@@ -469,6 +482,9 @@ align-items: center; */
 /* ========= Contacts ==========*/
 .contact-list {
   margin-bottom: 70px;
+}
+.last-sections-side.contacts {
+  background-image: url(../images/contacts/bg-contacts.png);
 }
 .contacts-link {
   font-size: 18px;
