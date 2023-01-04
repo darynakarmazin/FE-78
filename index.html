@@ -124,37 +124,37 @@
           <div class="prices-wrap">
             <ul class="prices-table list">
               <li class="prices-item">
-                <p>Men’s haircut</p>
+                <p class="prices-item-text">Men’s haircut</p>
                 <p>from 300 uah.</p>
               </li>
               <li class="prices-item">
-                <p>Beard trim</p>
+                <p class="prices-item-text">Beard trim</p>
                 <p>from 300 uah.</p>
               </li>
               <li class="prices-item">
-                <p>Mustache trim</p>
+                <p class="prices-item-text">Mustache trim</p>
                 <p>from 200 uah.</p>
               </li>
               <li class="prices-item">
-                <p>Straight razor shave</p>
+                <p class="prices-item-text">Straight razor shave</p>
                 <p>from 200 uah.</p>
               </li>
             </ul>
             <ul class="prices-table list">
               <li class="prices-item">
-                <p>Trainee’s haircut</p>
+                <p class="prices-item-text">Trainee’s haircut</p>
                 <p>from 50 uah.</p>
               </li>
               <li class="prices-item">
-                <p>Haircut under the nozzle</p>
+                <p class="prices-item-text">Haircut under the nozzle</p>
                 <p>from 200 uah.</p>
               </li>
               <li class="prices-item">
-                <p>Children’s haircut (0-12 y.o.)</p>
+                <p class="prices-item-text">Children’s haircut (0-12 y.o.)</p>
                 <p>from 300 uah.</p>
               </li>
               <li class="prices-item">
-                <p>Camouflage of gray hair</p>
+                <p class="prices-item-text">Camouflage of gray hair</p>
                 <p>from 200 uah.</p>
               </li>
             </ul>
@@ -409,49 +409,61 @@
           </ul>
         </div>
       </section>
-      <div class="last-sections section">
+      <div class="last-sections">
         <div class="last-container container">
-        <!-- Online-booking -->
-        <section class="booking last-sections-side">
-          <div class="online-booking-side">
-            <h2 class="section-title section-title-theme-dark">Online-booking</h2>
-            <input type="text"><input type="text">
-            <area shape="" coords="" href="" alt="">
-            <button class="modal-btn modal-btn-theme-dark" type="submit">send</button>
-          </div>
-        </section>
-        <!-- Contacts -->
-        <section class="contacts last-sections-side" id="contacts">
-          <div class="contacts-side">
-            <h2 class="section-title section-title-theme-dark">Contacts</h2>
-            <adress>
-              <ul class="contact-list list">
-                <li>
-                  <a
-                    class="link contacts-link adress"
-                    href="https://goo.gl/maps/RsUKrL9NW7S4d8BLA"
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    >st. Vasilkivska, 7A <br />
-                    Kyiv, 08132</a
-                  >
-                </li>
-                <li>
-                  <a class="link contacts-link" href="tel:+380441111111">+38 044 111 11 11</a>
-                </li>
-                <li>
-                  <a class="contacts-link" href="mailto:barbershop@email.com"
-                    >barbershop@email.com</a
-                  >
-                </li>
-              </ul>
-            </adress>
-            <h3 class="contacts-text">Working hours</h3>
-            <p class="contacts-time">Every day from 9:00 to 22:00</p>
-          </div>
-        </section>
+          <!-- Online-booking -->
+          <section class="booking last-sections-side">
+            <div class="online-booking-side">
+              <h2 class="section-title section-title-theme-dark">Online-booking</h2>
+              <input type="text" /><input type="text" />
+              <area shape="" coords="" href="" alt="" />
+              <button class="modal-btn modal-btn-theme-dark" type="submit">send</button>
+            </div>
+          </section>
+          <!-- Contacts -->
+          <section class="contacts last-sections-side" id="contacts">
+            <div class="contacts-side">
+              <h2 class="section-title section-title-theme-dark">Contacts</h2>
+              <adress>
+                <ul class="contact-list list">
+                  <li class="adress">
+                    <a
+                      class="link contacts-link adress"
+                      href="https://goo.gl/maps/RsUKrL9NW7S4d8BLA"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                    >
+                      <svg class="adress-icon" width="24" height="24">
+                        <use href="./images/sprite-svg/sprite.svg#icon-map-pin"></use>
+                      </svg>
+                      st. Vasilkivska, 7A <br />
+                      Kyiv, 08132</a
+                    >
+                  </li>
+                  <li class="phone">
+                    <a class="link contacts-link phone" href="tel:+380441111111"
+                      ><svg class="adress-icon" width="24" height="24">
+                        <use href="./images/sprite-svg/sprite.svg#icon-phone"></use>
+                      </svg>
+                      +38 044 111 11 11</a
+                    >
+                  </li>
+                  <li>
+                    <a class="contacts-link" href="mailto:barbershop@email.com"
+                      ><svg class="adress-icon" width="24" height="24">
+                        <use href="./images/sprite-svg/sprite.svg#icon-mail"></use>
+                      </svg>
+                      barbershop@email.com</a
+                    >
+                  </li>
+                </ul>
+              </adress>
+              <h3 class="contacts-text">Working hours</h3>
+              <p class="contacts-time">Every day from 9:00 to 22:00</p>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
     </main>
     <!-- footer -->
     <footer class="footer">

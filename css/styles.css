@@ -46,7 +46,7 @@ body {
   padding-bottom: 120px;
 }
 .container {
-  border: 1px solid #ff6c00;
+  /* border: 1px solid #ff6c00; */
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -110,13 +110,14 @@ body {
   height: 1px;
   content: '';
   margin-right: 20px;
+  background-color: currentColor;
 }
-.suptitle-theme-dark::before {
+/* .suptitle-theme-dark::before {
   background-color: rgba(157, 164, 189, 0.6);
 }
 .suptitle-theme-light::before {
   background-color: var(--primary-text-color-theme-light);
-}
+} */
 .suptitle-theme-dark {
   color: rgba(157, 164, 189, 0.6);
 }
@@ -307,6 +308,8 @@ body {
 
 /* ========== SERVICES AND PRICES ==========*/
 .prices {
+  max-width: 1600px;
+  margin: 0 auto;
   background-image: url(../images/services-and-prices/prices-img.png),
     linear-gradient(#111319, #111319);
   background-size: cover;
@@ -318,6 +321,7 @@ body {
   margin-bottom: 44px;
 }
 .prices-table {
+  padding: 30px 20px;
   width: calc((100% - 30px) / 2);
   font-size: 18px;
   line-height: 1.67;
@@ -325,12 +329,23 @@ body {
   color: var(--secondary-text-color-theme-dark);
   background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
+.prices-item::before {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background: rgba(157, 164, 189, 0.12);
+}
 .prices-item {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
+  gap: 12px;
 }
 .prices-item + .prices-item {
   margin-top: 20px;
+}
+.prices-item-text {
+  order: -1;
 }
 .prices-btn {
   display: block;
@@ -340,6 +355,7 @@ body {
 
 /* ========== ¿Why people come to us? =========*/
 .number-benefits {
+  position: relative;
   margin-bottom: 6px;
   font-weight: 700;
   font-size: 42px;
@@ -348,6 +364,14 @@ body {
   letter-spacing: 0.05em;
 
   color: var(--primary-text-color-theme-light);
+}
+.number-benefits::after {
+  position: absolute;
+  top: 0;
+
+  content: '+';
+  font-size: 16px;
+  color: #ff6c00;
 }
 .discription-benefits {
   font-weight: 600;
@@ -459,7 +483,14 @@ body {
 
 /* ========== Online-booking ========== */
 .last-sections {
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: #191c26;
+  background-image: url(../images/contacts/bg-contacts.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 50%;
+  height: 100%;
 }
 .last-container {
   display: flex;
@@ -472,10 +503,14 @@ align-items: center; */
 }
 .booking {
   width: 50%;
+  padding-top: 130px;
+  padding-bottom: 120px;
 }
 .contacts {
   width: 50%;
-  padding-left: 130px;
+  padding-top: 130px;
+  padding-bottom: 120px;
+  padding-left: 100px;
 }
 /* ========== Online-booking ========== */
 
@@ -483,10 +518,9 @@ align-items: center; */
 .contact-list {
   margin-bottom: 70px;
 }
-.last-sections-side.contacts {
-  background-image: url(../images/contacts/bg-contacts.png);
-}
 .contacts-link {
+  display: flex;
+  align-items: flex-start;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
@@ -521,13 +555,22 @@ align-items: center; */
 }
 .adress {
   font-weight: 700;
+  margin-bottom: 20px;
+}
+.adress-icon {
+  margin-right: 16px;
+}
+.phone {
+  margin-bottom: 20px;
 }
 /* ========= /Contacts ==========*/
 
 /* ========== Footer ========== */
-.footer-container {
+.footer {
   padding-top: 56px;
   padding-bottom: 56px;
+}
+.footer-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
