@@ -520,8 +520,8 @@ align-items: center; */
   text-transform: uppercase;
   color: rgba(157, 164, 189, 0.4);
 }
-.booking-label .booking-text:hover,
-.booking-label .booking-text:focus {
+.booking-label:hover .booking-text,
+.booking-label:focus .booking-text {
   color: #ffffff;
 }
 .booking-input:hover,
