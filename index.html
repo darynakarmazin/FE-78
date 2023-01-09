@@ -415,9 +415,26 @@
           <section class="booking last-sections-side">
             <div class="online-booking-side">
               <h2 class="section-title section-title-theme-dark">Online-booking</h2>
-              <input type="text" /><input type="text" />
-              <area shape="" coords="" href="" alt="" />
-              <button class="modal-btn modal-btn-theme-dark" type="submit">send</button>
+              <form name="online-booking" autocomplete="on" novalidate>
+                <div class="booking-row">
+                  <label class="booking-label">
+                    <p class="booking-text">Name*</p>
+                    <input class="booking-input" type="text" name="name" />
+                  </label>
+                  <label class="booking-label">
+                    <p class="booking-text">Phone*</p>
+                    <input class="booking-input" type="tel" name="phone" />
+                  </label>
+                </div>
+                <label class="booking-label">
+                  <textarea
+                    class="booking-input booking-comment"
+                    name="message"
+                    placeholder="Message"
+                  ></textarea>
+                </label>
+                <button class="modal-btn modal-btn-theme-dark" type="submit">send</button>
+              </form>
             </div>
           </section>
           <!-- Contacts -->
