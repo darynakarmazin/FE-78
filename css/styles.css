@@ -524,6 +524,8 @@ align-items: center; */
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--primary-text-color-theme-dark);
+
+  transition: border-bottom 250ms linear;
 }
 .booking-input:hover,
 .booking-input:focus {
@@ -536,6 +538,8 @@ align-items: center; */
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(157, 164, 189, 0.4);
+
+  transition: color 250ms linear;
 }
 .booking-input:hover::-webkit-input-placeholder,
 .booking-input:focus::-webkit-input-placeholder {
