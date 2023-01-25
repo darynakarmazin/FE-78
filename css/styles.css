@@ -242,8 +242,6 @@ body {
 }
 .hero .media-list {
   transform: rotate(-90deg);
-}
-.media-list {
   display: flex;
   align-items: center;
   padding-left: 400px;
@@ -630,5 +628,9 @@ align-items: center; */
   letter-spacing: 0.2em;
 
   color: var(--secondary-text-color-theme-dark);
+}
+.footer .media-list {
+  display: flex;
+  align-items: center;
 }
 /* ========== /Footer ========== */
